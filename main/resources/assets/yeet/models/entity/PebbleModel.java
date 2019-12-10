@@ -1,4 +1,4 @@
-package assets.afiajar.models.entity;
+package assets.yeet.models.entity;
 //Made with Blockbench
 //Paste this code into your mod.
 
