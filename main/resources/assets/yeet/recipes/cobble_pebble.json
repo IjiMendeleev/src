@@ -1,0 +1,7 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "minecraft:cobblestone" }
+    ],
+    "result": { "item": "afiajar:cobble_pebble", "count": 4}
+}

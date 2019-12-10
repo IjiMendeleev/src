@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "pp",
+        "pp"   
+    ],
+    "key":
+    {
+        "p":
+        {"item": "afiajar:cobble_pebble"} 
+    },
+    "result":
+    {
+        "item": "minecraft:cobblestone",
+        "count": 1,
+        "data": 0
+    }
+}
