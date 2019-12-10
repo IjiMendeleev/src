@@ -1,40 +1,36 @@
 package com.evershy.yeet;
 
-
+import com.evershy.yeet.util.Reference;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.evershy.yeet.util.Reference;
-
-public class EntityPebble extends EntityThrowable 
+public class EntityNBrick extends EntityThrowable 
 {
-	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entities/projectiles/cobble_pebble.png");
 	
-	public EntityPebble(World worldIn, String name)
+	public EntityNBrick(World worldIn, String name)
     {
     	super(worldIn);
     	cachedUniqueIdString = name;
     }
-	public EntityPebble(World worldIn)
+	public EntityNBrick(World worldIn)
     {
         super(worldIn);
     }
 
-    public EntityPebble(World worldIn, EntityLivingBase throwerIn)
+    public EntityNBrick(World worldIn, EntityLivingBase throwerIn)
     {
         super(worldIn, throwerIn);
     }
 
-    public EntityPebble(World worldIn, double x, double y, double z)
+    public EntityNBrick(World worldIn, double x, double y, double z)
     {
         super(worldIn, x, y, z);
     }
@@ -59,7 +55,7 @@ public class EntityPebble extends EntityThrowable
 		            int i = 6;
 
 		            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
-		           
+		            result.entityHit.setFire(3);
 		        }
 
 		        if (!this.world.isRemote)

@@ -49,9 +49,13 @@ public class Main
 		//GameRegistry.addShapelessRecipe(new ResourceLocation("cobble_pebble"), new ResourceLocation(Reference.MOD_ID), new ItemStack(AItems.PEBBLE, 1, 0), Ingredient.fromStacks(new ItemStack(Blocks.COBBLESTONE)));
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "cobble_pebble"), EntityPebble.class, "cobble_pebble", 31, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "brick"), EntityBrick.class, "brick", 32, Main.instance, 50, 1, true, 0x696969, 0x111111);
+		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "Nbrick"), EntityPebble.class, "nether_brick", 33, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		RenderingRegistry.registerEntityRenderingHandler(EntityPebble.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.PEBBLE,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBrick.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.BRICK,Minecraft.getMinecraft().getRenderItem()));
+		RenderingRegistry.registerEntityRenderingHandler(EntityNBrick.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.NETHERBRICK,Minecraft.getMinecraft().getRenderItem()));
+
 	}
+	
 	
 	@EventHandler
 	public static void PostInit(FMLPostInitializationEvent event)

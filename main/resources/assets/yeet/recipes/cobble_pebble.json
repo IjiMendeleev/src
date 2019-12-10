@@ -3,5 +3,5 @@
     "ingredients": [
         { "item": "minecraft:cobblestone" }
     ],
-    "result": { "item": "afiajar:cobble_pebble", "count": 4}
+    "result": { "item": "yeet:cobble_pebble", "count": 4}
 }

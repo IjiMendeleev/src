@@ -12,4 +12,6 @@ public class AItems extends Item
  public static final ItemPebble PEBBLE = new ItemPebble("cobble_pebble");
  
  public static final BrickThrowable BRICK = new BrickThrowable("brick");
+ 
+ public static final NBrickThrowable NETHERBRICK = new NBrickThrowable("nether_brick");
 }

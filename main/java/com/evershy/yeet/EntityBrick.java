@@ -15,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EntityBrick extends EntityThrowable
 {
-	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entities/projectiles/brick.png");
+	
 	
 	    public EntityBrick(World worldIn, String name)
 	    {
