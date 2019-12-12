@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "textures/items",
+		"0": "assets/yeet/textures/items/red_ornament",
 		"particle": "textures/items"
 	},
 	"elements": [

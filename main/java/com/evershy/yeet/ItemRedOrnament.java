@@ -18,13 +18,12 @@ import net.minecraft.world.World;
 public class ItemRedOrnament extends Item  implements iHasModel 
 {
   public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/items/red_ornament.png");
-	
+
   public ItemRedOrnament(String name)
   {
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-               
         AItems.ITEMS.add(this); 
   }
   @Override 
