@@ -17,7 +17,7 @@ import com.evershy.yeet.util.Reference;
 
 public class EntityPebble extends EntityThrowable 
 {
-	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entities/projectiles/cobble_pebble.png");
+	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/items/cobble_pebble.png");
 	
 	public EntityPebble(World worldIn, String name)
     {

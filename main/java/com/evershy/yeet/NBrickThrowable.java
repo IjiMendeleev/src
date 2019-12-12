@@ -19,7 +19,6 @@ public class NBrickThrowable extends Item implements iHasModel
 
 		public NBrickThrowable(String name)
 		{
-	       setUnlocalizedName(name);
 	       setRegistryName("minecraft:netherbrick");
 	       setCreativeTab(CreativeTabs.COMBAT);
 	              
