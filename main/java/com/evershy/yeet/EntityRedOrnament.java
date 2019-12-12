@@ -52,40 +52,27 @@ import net.minecraft.util.DamageSource;
 	            }
 	        }
 	    }
-		boolean dropitem;
+		boolean candrop;
 		@Override
 		protected void onImpact(RayTraceResult result) 
 		{
 			 
 			        if (result.entityHit != null)
 			        {
-			        	dropitem = false;
 			            int i = 0;
-                
+
 			            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
-			            this.setDead();
-			            
-			        }
-			        else
-			        {
-			        	dropitem = true;
-			        	
 			        }
 			        if (!this.world.isRemote)
+			        { 
+			        	if (result.entityHit == null)
 			        {
-			        	if (dropitem = true)
-			        	{
-			        		this.dropItem(AItems.ORNAMENT, 1);
-			        	}
+			        	this.dropItem(AItems.ORNAMENT, 1);
+			        }
 			            this.world.setEntityState(this, (byte)3);
-			            this.setDead();
-			             
-			            
-			            	
-			            
+			            this.setDead();   
 			        }
 			        
 		}
-		
 }
 	
