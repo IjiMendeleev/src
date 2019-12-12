@@ -40,6 +40,14 @@
 		},
 		"firstperson_lefthand": {
 			"translation": [0, 5.75, 0]
+		},
+		"ground": {
+			"translation": [0, 4.5, 0]
+		},
+		"gui": {
+			"rotation": [0, 51, 0],
+			"translation": [0, 8.75, 0],
+			"scale": [2, 2, 2]
 		}
 	}
 }

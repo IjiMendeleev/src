@@ -16,4 +16,6 @@ public class AItems extends Item
  public static final NBrickThrowable NETHERBRICK = new NBrickThrowable("nether_brick");
  
  public static final ItemRedOrnament ORNAMENT = new ItemRedOrnament("red_ornament");
+
+ public static final SlimeBallThrowable SLIMEBALL = new SlimeBallThrowable("slime_ball");
 }
