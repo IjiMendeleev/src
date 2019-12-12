@@ -50,7 +50,7 @@ public class Main
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "cobble_pebble"), EntityPebble.class, "cobble_pebble", 31, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "brick"), EntityBrick.class, "brick", 32, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "Nbrick"), EntityNBrick.class, "nether_brick", 33, Main.instance, 50, 1, true, 0x696969, 0x111111);
-		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "RedOrnament"), EntityRedOrnament.class, "red_ornament", 33, Main.instance, 50, 1, true, 0x696969, 0x111111);
+		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "RedOrnament"), EntityRedOrnament.class, "red_ornament", 34, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		RenderingRegistry.registerEntityRenderingHandler(EntityPebble.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.PEBBLE,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBrick.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.BRICK,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityNBrick.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.NETHERBRICK,Minecraft.getMinecraft().getRenderItem()));

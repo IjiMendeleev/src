@@ -1,5 +1,6 @@
 package com.evershy.yeet;
 
+import com.evershy.yeet.util.Reference;
 import com.evershy.yeet.util.handlers.iHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,12 +11,14 @@ import net.minecraft.stats.StatList;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
 public class ItemRedOrnament extends Item  implements iHasModel 
 {
-  
+  public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/items/red_ornament.png");
+	
   public ItemRedOrnament(String name)
   {
         setUnlocalizedName(name);
