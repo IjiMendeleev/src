@@ -3,8 +3,10 @@ package com.evershy.yeet;
 
 
 	import net.minecraft.entity.EntityLivingBase;
-	import net.minecraft.entity.projectile.EntityThrowable;
-	import net.minecraft.util.DamageSource;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.item.Item;
+import net.minecraft.util.DamageSource;
 	import net.minecraft.util.EnumParticleTypes;
 	import net.minecraft.util.ResourceLocation;
 	import net.minecraft.util.datafix.DataFixer;
@@ -50,23 +52,40 @@ package com.evershy.yeet;
 	            }
 	        }
 	    }
+		boolean dropitem;
 		@Override
 		protected void onImpact(RayTraceResult result) 
 		{
 			 
 			        if (result.entityHit != null)
 			        {
+			        	dropitem = false;
 			            int i = 0;
-
+                
 			            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
-			           
+			            this.setDead();
+			            
 			        }
-
+			        else
+			        {
+			        	dropitem = true;
+			        	
+			        }
 			        if (!this.world.isRemote)
 			        {
+			        	if (dropitem = true)
+			        	{
+			        		this.dropItem(AItems.ORNAMENT, 1);
+			        	}
 			            this.world.setEntityState(this, (byte)3);
 			            this.setDead();
+			             
+			            
+			            	
+			            
 			        }
 			        
 		}
+		
 }
+	
