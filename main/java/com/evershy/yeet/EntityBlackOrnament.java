@@ -19,34 +19,35 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-	public class EntityRedOrnament extends EntityThrowable
+	public class EntityBlackOrnament extends EntityThrowable
 	{
+		public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":" + "textures/items/black_ornament.png");
 		
 		public final InventoryBasic OrnamentInventory;
 		
 		
 		
-		public EntityRedOrnament(World worldIn, String name)
+		public EntityBlackOrnament(World worldIn, String name)
 	    {
 	    	
 			super(worldIn);
 	    	cachedUniqueIdString = name;
 	    	this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
-		public EntityRedOrnament(World worldIn)
+		public EntityBlackOrnament(World worldIn)
 	    {
 	        
 			super(worldIn);
 			this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, EntityLivingBase throwerIn)
+	    public EntityBlackOrnament(World worldIn, EntityLivingBase throwerIn)
 	    {
 	        super(worldIn, throwerIn);
 	        this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, double x, double y, double z)
+	    public EntityBlackOrnament(World worldIn, double x, double y, double z)
 	    {
 	        
 			super(worldIn, x, y, z);
@@ -78,7 +79,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			        if (!this.world.isRemote && result.entityHit == null)
 			        {   			        	
 			        	
-			        	this.dropItem(AItems.REDORNAMENT, 1);
+			        	this.dropItem(AItems.BLKORNAMENT, 1);
 			            this.world.setEntityState(this, (byte)3);
 			            this.setDead();   
 			        }

@@ -53,6 +53,7 @@ public class EntitySlimeball extends EntityThrowable
 			            int i = 2;
 
 			            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
+			            
 			        }
 
 			        if (!this.world.isRemote)

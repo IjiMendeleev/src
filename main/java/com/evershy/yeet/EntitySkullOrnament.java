@@ -19,34 +19,34 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-	public class EntityRedOrnament extends EntityThrowable
+	public class EntitySkullOrnament extends EntityThrowable
 	{
 		
 		public final InventoryBasic OrnamentInventory;
 		
 		
 		
-		public EntityRedOrnament(World worldIn, String name)
+		public EntitySkullOrnament(World worldIn, String name)
 	    {
 	    	
 			super(worldIn);
 	    	cachedUniqueIdString = name;
 	    	this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
-		public EntityRedOrnament(World worldIn)
+		public EntitySkullOrnament(World worldIn)
 	    {
 	        
 			super(worldIn);
 			this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, EntityLivingBase throwerIn)
+	    public EntitySkullOrnament(World worldIn, EntityLivingBase throwerIn)
 	    {
 	        super(worldIn, throwerIn);
 	        this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, double x, double y, double z)
+	    public EntitySkullOrnament(World worldIn, double x, double y, double z)
 	    {
 	        
 			super(worldIn, x, y, z);
@@ -70,7 +70,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			 
 			        if (result.entityHit != null)
 			        {
-			            int i = 0;
+			            int i = this.rand.nextInt(16);
 
 			            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
 			            this.setDead();
@@ -78,7 +78,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			        if (!this.world.isRemote && result.entityHit == null)
 			        {   			        	
 			        	
-			        	this.dropItem(AItems.REDORNAMENT, 1);
+			        	this.dropItem(AItems.SKLORNAMENT, 1);
 			            this.world.setEntityState(this, (byte)3);
 			            this.setDead();   
 			        }

@@ -19,34 +19,34 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-	public class EntityRedOrnament extends EntityThrowable
+	public class EntityPinkOrnament extends EntityThrowable
 	{
 		
 		public final InventoryBasic OrnamentInventory;
 		
 		
 		
-		public EntityRedOrnament(World worldIn, String name)
+		public EntityPinkOrnament(World worldIn, String name)
 	    {
 	    	
 			super(worldIn);
 	    	cachedUniqueIdString = name;
 	    	this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
-		public EntityRedOrnament(World worldIn)
+		public EntityPinkOrnament(World worldIn)
 	    {
 	        
 			super(worldIn);
 			this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, EntityLivingBase throwerIn)
+	    public EntityPinkOrnament(World worldIn, EntityLivingBase throwerIn)
 	    {
 	        super(worldIn, throwerIn);
 	        this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, double x, double y, double z)
+	    public EntityPinkOrnament(World worldIn, double x, double y, double z)
 	    {
 	        
 			super(worldIn, x, y, z);
@@ -78,7 +78,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 			        if (!this.world.isRemote && result.entityHit == null)
 			        {   			        	
 			        	
-			        	this.dropItem(AItems.REDORNAMENT, 1);
+			        	this.dropItem(AItems.PNKORNAMENT, 1);
 			            this.world.setEntityState(this, (byte)3);
 			            this.setDead();   
 			        }
