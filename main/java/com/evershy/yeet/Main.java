@@ -51,7 +51,6 @@ public class Main
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "brick"), EntityBrick.class, "brick", 32, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "Nbrick"), EntityNBrick.class, "nether_brick", 33, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "red_ornament"), EntityRedOrnament.class, "red_ornament", 34, Main.instance, 50, 1, true, 0x696969, 0x111111);
-		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "SlimeBall"), EntitySlimeball.class, "slime_ball", 35, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "black_ornament"), EntityBlackOrnament.class, "black_ornament", 36, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "blue_ornament"), EntityBlueOrnament.class, "blue_ornament", 37, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "creeper_ornament"), EntityCreeperOrnament.class, "creeper_ornament", 38, Main.instance, 50, 1, true, 0x696969, 0x111111);
@@ -67,11 +66,12 @@ public class Main
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "skull_ornament"), EntitySkullOrnament.class, "skull_ornament", 48, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "white_ornament"), EntityWhiteOrnament.class, "white_ornament", 49, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "yellow_ornament"), EntityYellowOrnament.class, "yellow_ornament", 50, Main.instance, 50, 1, true, 0x696969, 0x111111);
+		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "stramge_green_ornament"), EntityStrangeGreenOrnament.class, "strange_green_ornament", 51, Main.instance, 50, 1, true, 0x696969, 0x111111);
+		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID, "shuriken"), EntityShuriken.class, "shuriken", 52, Main.instance, 50, 1, true, 0x696969, 0x111111);
 		RenderingRegistry.registerEntityRenderingHandler(EntityPebble.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.PEBBLE,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBrick.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.BRICK,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityNBrick.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.NETHERBRICK,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityRedOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.REDORNAMENT,Minecraft.getMinecraft().getRenderItem()));
-		RenderingRegistry.registerEntityRenderingHandler(EntitySlimeball.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.SLIMEBALL,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBlackOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.BLKORNAMENT,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBlueOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.BLUORNAMENT,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCreeperOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.CREORNAMENT,Minecraft.getMinecraft().getRenderItem()));
@@ -86,7 +86,10 @@ public class Main
 		RenderingRegistry.registerEntityRenderingHandler(EntitySkullOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.SKLORNAMENT,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWhiteOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.WHTORNAMENT,Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityYellowOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.YELORNAMENT,Minecraft.getMinecraft().getRenderItem()));
-		}
+		RenderingRegistry.registerEntityRenderingHandler(EntityStrangeGreenOrnament.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.GRENADE,Minecraft.getMinecraft().getRenderItem()));
+		RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(),AItems.SHURIKEN,Minecraft.getMinecraft().getRenderItem()));
+
+	}
 	
 	
 	@EventHandler

@@ -5,6 +5,8 @@ package com.evershy.yeet;
 	import com.evershy.yeet.util.Reference;
 
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.inventory.InventoryBasic;
@@ -19,34 +21,34 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-	public class EntityRedOrnament extends EntityThrowable
+	public class EntityStrangeGreenOrnament extends EntityThrowable
 	{
 		
 		public final InventoryBasic OrnamentInventory;
 		
 		
 		
-		public EntityRedOrnament(World worldIn, String name)
+		public EntityStrangeGreenOrnament(World worldIn, String name)
 	    {
 	    	
 			super(worldIn);
 	    	cachedUniqueIdString = name;
 	    	this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
-		public EntityRedOrnament(World worldIn)
+		public EntityStrangeGreenOrnament(World worldIn)
 	    {
 	        
 			super(worldIn);
 			this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, EntityLivingBase throwerIn)
+	    public EntityStrangeGreenOrnament(World worldIn, EntityLivingBase throwerIn)
 	    {
 	        super(worldIn, throwerIn);
 	        this.OrnamentInventory = new InventoryBasic("Item", false, 1);
 	    }
 
-	    public EntityRedOrnament(World worldIn, double x, double y, double z)
+	    public EntityStrangeGreenOrnament(World worldIn, double x, double y, double z)
 	    {
 	        
 			super(worldIn, x, y, z);
@@ -67,24 +69,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 		@Override
 		protected void onImpact(RayTraceResult result) 
 		{
-			 
-			        if (result.entityHit != null && result.entityHit != thrower)
+			 	
+			        if (!this.world.isRemote)
 			        {
-			            int i = 0;
+			            int i = 6;
 
-			            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)i);
+			            this.world.createExplosion(this, this.posX , this.posY , this.posZ , 4F, false);
 			            this.setDead();
 			        }
-			        if (!this.world.isRemote && result.entityHit == null)
-			        {   			        	
-			        	
-			        	this.dropItem(AItems.REDORNAMENT, 1);
-			            this.world.setEntityState(this, (byte)3);
-			            this.setDead();   
-			        }
-		}	        
-		
-			
-		
-}
+			        
+}}
 	

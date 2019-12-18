@@ -49,7 +49,7 @@ public class ItemOrnament extends Item  implements iHasModel
        if (!worldIn.isRemote && this.color == "red_ornament")
        {
         EntityRedOrnament entitycoloredornament = new EntityRedOrnament(worldIn, playerIn);
-        entitycoloredornament.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
+        entitycoloredornament.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 4F, 1.0F);
         worldIn.spawnEntity(entitycoloredornament);
        }
        if (!worldIn.isRemote && this.color == "black_ornament")
@@ -139,6 +139,12 @@ public class ItemOrnament extends Item  implements iHasModel
        if (!worldIn.isRemote && this.color == "yellow_ornament")
        {
         EntityYellowOrnament entitycoloredornament = new EntityYellowOrnament(worldIn, playerIn);
+        entitycoloredornament.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
+        worldIn.spawnEntity(entitycoloredornament);
+       }
+       if (!worldIn.isRemote && this.color == "strange_green_ornament")
+       {
+        EntityStrangeGreenOrnament entitycoloredornament = new EntityStrangeGreenOrnament(worldIn, playerIn);
         entitycoloredornament.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
         worldIn.spawnEntity(entitycoloredornament);
        }

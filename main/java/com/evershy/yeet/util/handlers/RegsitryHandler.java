@@ -1,15 +1,12 @@
 package com.evershy.yeet.util.handlers;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
+import com.evershy.yeet.AItems;
+
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.EntityEntry;
-
-import com.evershy.yeet.AItems;
 
 
 
@@ -32,6 +29,7 @@ public class RegsitryHandler
 				((iHasModel)item).registerModels();
 			}
 		}
+		
 
 	}
 }
